@@ -16,7 +16,7 @@ jobs:
       - aws-s3/sync:
           arguments: |
             --cache-control "max-age=86400"
-          from: dist
+          from: dist/test-app
           overwrite: true
           to: 's3://angular-app-archu/'
       - run:
@@ -36,7 +36,7 @@ jobs:
       - aws-s3/sync:
           arguments: |
             --cache-control "max-age=86400"
-          from: dist
+          from: dist/test-app
           overwrite: true
           to: 's3://angular-app-archu/'
       - run:
